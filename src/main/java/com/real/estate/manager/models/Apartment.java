@@ -3,8 +3,6 @@ package com.real.estate.manager.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.Set;
 
 @Entity
 public class Apartment {
@@ -18,21 +16,6 @@ public class Apartment {
 
     private int areaOfBed;
     private int areaOfBath;
-
-    public Apartment(int totalArea, int price, int noOfBed, int noOfBath, int areaOfBed, int areaOfBath) {
-        this.totalArea = totalArea;
-        this.price = price;
-        this.noOfBed = noOfBed;
-        this.noOfBath = noOfBath;
-        this.areaOfBed = areaOfBed;
-        this.areaOfBath = areaOfBath;
-    }
-
-    public Apartment() { }
-
-//    @OneToMany(mappedBy="apartment")
-//    private Set<Room> rooms;
-
 
     public int getTotalArea() {
         return totalArea;
