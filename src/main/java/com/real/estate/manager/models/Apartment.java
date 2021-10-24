@@ -3,19 +3,19 @@ package com.real.estate.manager.models;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Apartment {
     @Id
     @GeneratedValue
     private Long id;
-    private int totalArea;
-    private int price;
-    private int noOfBed;
-    private int noOfBath;
-
-    private int areaOfBed;
-    private int areaOfBath;
+    @NotNull private Integer totalArea;
+    @NotNull private Integer price;
+    @NotNull private Integer noOfBedRoom;
+    @NotNull private Integer noOfBathRoom;
+    @NotNull private Integer bedRoomArea;
+    @NotNull private Integer bathRoomArea;
 
     public int getTotalArea() {
         return totalArea;
@@ -33,36 +33,36 @@ public class Apartment {
         this.price = price;
     }
 
-    public int getNoOfBed() {
-        return noOfBed;
+    public int getNoOfBedRoom() {
+        return noOfBedRoom;
     }
 
-    public void setNoOfBed(int noOfBed) {
-        this.noOfBed = noOfBed;
+    public void setNoOfBedRoom(int noOfBedRoom) {
+        this.noOfBedRoom = noOfBedRoom;
     }
 
-    public int getNoOfBath() {
-        return noOfBath;
+    public int getNoOfBathRoom() {
+        return noOfBathRoom;
     }
 
-    public void setNoOfBath(int noOfBath) {
-        this.noOfBath = noOfBath;
+    public void setNoOfBathRoom(int noOfBathRoom) {
+        this.noOfBathRoom = noOfBathRoom;
     }
 
-    public int getAreaOfBed() {
-        return areaOfBed;
+    public int getBedRoomArea() {
+        return bedRoomArea;
     }
 
-    public void setAreaOfBed(int areaOfBed) {
-        this.areaOfBed = areaOfBed;
+    public void setBedRoomArea(int bedRoomArea) {
+        this.bedRoomArea = bedRoomArea;
     }
 
-    public int getAreaOfBath() {
-        return areaOfBath;
+    public int getBathRoomArea() {
+        return bathRoomArea;
     }
 
-    public void setAreaOfBath(int areaOfBath) {
-        this.areaOfBath = areaOfBath;
+    public void setBathRoomArea(int bathRoomArea) {
+        this.bathRoomArea = bathRoomArea;
     }
 
     public Long getId() {

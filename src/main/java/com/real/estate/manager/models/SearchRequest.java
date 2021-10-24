@@ -1,12 +1,14 @@
 package com.real.estate.manager.models;
 
+import javax.validation.constraints.NotNull;
+
 public class SearchRequest {
-    private int minTotalArea;
-    private int price;
-    private int minNoOfBed;
-    private int minNoOfBath;
-    private int minAreaOfBed;
-    private int minAreaOfBath;
+    @NotNull private Integer minTotalArea;
+    @NotNull private Integer price;
+    @NotNull private Integer minNoOfBedRoom;
+    @NotNull private Integer minNoOfBathRoom;
+    @NotNull private Integer minBedRoomArea;
+    @NotNull private Integer minBathRoomArea;
 
     public int getMinTotalArea() {
         return minTotalArea;
@@ -16,20 +18,20 @@ public class SearchRequest {
         return price;
     }
 
-    public int getMinNoOfBed() {
-        return minNoOfBed;
+    public int getMinNoOfBedRoom() {
+        return minNoOfBedRoom;
     }
 
-    public int getMinNoOfBath() {
-        return minNoOfBath;
+    public int getMinNoOfBathRoom() {
+        return minNoOfBathRoom;
     }
 
-    public int getMinAreaOfBed() {
-        return minAreaOfBed;
+    public int getMinBedRoomArea() {
+        return minBedRoomArea;
     }
 
-    public int getMinAreaOfBath() {
-        return minAreaOfBath;
+    public int getMinBathRoomArea() {
+        return minBathRoomArea;
     }
 
 }

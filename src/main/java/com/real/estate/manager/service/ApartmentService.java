@@ -17,7 +17,7 @@ public class ApartmentService {
     }
 
     public Apartment find(SearchRequest request) {
-        return apartmentRepository.findApartments(request.getMinNoOfBed(), request.getMinNoOfBath(),
-                request.getMinTotalArea(), request.getMinAreaOfBath(), request.getMinAreaOfBed(), request.getPrice());
+        return apartmentRepository.findApartments(request.getMinNoOfBedRoom(), request.getMinNoOfBathRoom(),
+                request.getMinTotalArea(), request.getMinBathRoomArea(), request.getMinBedRoomArea(), request.getPrice());
     }
 }

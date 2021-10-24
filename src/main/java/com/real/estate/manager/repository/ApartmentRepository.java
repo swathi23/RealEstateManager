@@ -10,11 +10,11 @@ import org.springframework.stereotype.Repository;
 public interface ApartmentRepository extends JpaRepository<Apartment, Long> {
 
     @Query(value = "SELECT * FROM Apartment a WHERE " +
-            "a.no_of_bed >= :minBeds and " +
-            "a.no_of_bath >= :minBath and " +
+            "a.no_of_bed_room >= :minBeds and " +
+            "a.no_of_bath_room >= :minBath and " +
             "a.total_area >= :totalArea and " +
-            "a.area_of_bath >= :bathRoomArea and " +
-            "a.area_of_bed >= :bedRoomArea and " +
+            "a.bath_room_area >= :bathRoomArea and " +
+            "a.bed_room_area >= :bedRoomArea and " +
             "a.price <= :price " +
             "order by price limit 1", nativeQuery = true)
     Apartment findApartments(@Param("minBeds") int minBeds,
